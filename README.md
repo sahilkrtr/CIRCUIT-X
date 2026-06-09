@@ -20,34 +20,6 @@ Supports LLaMA-2-7B, Mistral-7B-Instruct, and Gemma-7B on SPARTQA, StepGame, and
 pip install -r circuit_x/requirements.txt
 ```
 
-## Usage
-
-```bash
-# Run all experiments
-python circuit_x/main.py
-
-# Run a specific experiment
-python circuit_x/main.py --experiment table4
-
-# Limit batches for a quick smoke test
-python circuit_x/main.py --experiment table4 --max-stage1-batches 5 --max-eval-batches 3
-
-# Use a single backbone or dataset
-python circuit_x/main.py --backbone mistral --dataset spartqa
-```
-
-**Arguments:**
-
-| Argument | Choices | Default |
-|---|---|---|
-| `--experiment` | `all`, `table4`–`table10`, `figures` | `all` |
-| `--backbone` | `all`, `llama2`, `mistral`, `gemma` | `all` |
-| `--dataset` | `spartqa`, `stepgame`, `both` | `both` |
-| `--max-stage1-batches` | int | None (full) |
-| `--max-stage2-batches` | int | None (full) |
-| `--max-eval-batches` | int | None (full) |
-| `--quantize` | flag | auto-detect |
-
 ## Project Structure
 
 ```
